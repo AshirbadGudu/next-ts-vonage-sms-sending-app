@@ -44,13 +44,20 @@ const Home: NextPage = () => {
           placeholder="Enter phone number"
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
+          className="border border-blue-100 rounded p-2 w-full max-w-sm my-2"
         />
         <textarea
           placeholder="Enter message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
+          className="border border-blue-100 rounded p-2 w-full max-w-sm my-2"
         ></textarea>
-        <button onClick={sendMessage}>Send Message</button>
+        <button
+          onClick={sendMessage}
+          className="border border-blue-100 rounded p-2 w-full max-w-sm my-2 text-blue-600 hover:bg-blue-600 hover:text-white"
+        >
+          Send Message
+        </button>
       </main>
 
       <footer className={styles.footer}>
