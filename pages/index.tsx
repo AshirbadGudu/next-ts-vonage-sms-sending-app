@@ -17,7 +17,8 @@ const Home: NextPage = () => {
           method: "POST",
         })
       ).json();
-      console.log(result);
+
+      alert(result?.message || result?.error);
     } catch (error) {
       console.log(error);
     }
@@ -32,12 +33,12 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next SMS Sender</a>
+        <h1 className={"text-blue-800 text-6xl text-center"}>
+          Next SMS Sender
         </h1>
 
-        <p className={styles.description}>
-          Get started by entering phone number
+        <p className="my-4 text-2xl text-center">
+          Get started by entering phone number and message
         </p>
         <input
           type="tel"
